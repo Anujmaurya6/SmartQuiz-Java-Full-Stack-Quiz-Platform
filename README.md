@@ -1,134 +1,16 @@
-# 🚀 Quiz Application (Java Full Stack)
+# React + Vite
 
-A full-stack Quiz Application built using **Java, Spring Boot, and React**, designed to test users across multiple subjects with difficulty levels and real-time scoring.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 📌 Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-* 🎯 Subject-wise quizzes (HTML, Java, JavaScript, Spring Boot)
-* 📊 Difficulty levels: Easy | Medium | Hard
-* 🧠 Random question generation
-* ✅ Score tracking system
-* 🗂️ Database-driven question storage
-* 🔐 User-based quiz attempts tracking
-* ⚡ Fast and scalable backend with Spring Boot
-* 🧪 Unit testing using JUnit & Mockito
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-### Backend:
-
-* Java
-* Spring Boot
-* Spring Data JPA
-* Hibernate
-
-### Frontend:
-
-* React.js
-* HTML, CSS, JavaScript
-
-### Database:
-
-* MySQL
-
-### Testing:
-
-* JUnit
-* Mockito
-
----
-
-## 🧩 Project Structure
-
-```
-Backend (Spring Boot)
-├── Controller
-├── Service
-├── Repository
-├── Entity
-└── DTO
-
-Frontend (React)
-├── Components
-├── Pages
-└── API Integration
-```
-
----
-
-## 📂 Database Design
-
-* `questions` → stores quiz questions with options and difficulty
-* `users` → stores user details
-* `quiz_attempts` → stores user performance (score, date, time)
-
----
-
-## ⚙️ How to Run
-
-### Backend:
-
-```bash
-mvn spring-boot:run
-```
-
-### Frontend:
-
-```bash
-npm install
-npm start
-```
-
-### Database:
-
-* Import `.sql` file
-* Run all queries to setup tables and data
-
----
-
-## 🧪 Testing
-
-* Unit testing implemented using **JUnit**
-* Mocking done with **Mockito**
-* Covers service and controller layer
-
----
-
-## 📈 Future Improvements
-
-* 🔐 Authentication (JWT)
-* 📊 Leaderboard system
-* 📱 Mobile responsive UI
-* 🌐 Deployment on cloud (AWS / Render)
-
----
-
-## 💡 Learning Outcome
-
-This project helped in understanding:
-
-* Full-stack development flow
-* REST API design
-* Database structuring
-* Backend testing (JUnit + Mockito)
-* Real-world project architecture
-
----
-
-## 👨‍💻 Author
-
-**Anuj Maurya**
-Aspiring Java Full Stack Developer 🚀
-
----
-
-## ⭐ Final Note
-
-This is not just a project —
-it is a step towards becoming a professional developer.
-
----
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
