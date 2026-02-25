@@ -1,78 +1,94 @@
-# 🚀 Quiz Application (Java Full Stack)
+🚀 Quiz Application (Java Full Stack)
 
-A full-stack Quiz Application built using **Java, Spring Boot, and React**, designed to test users across multiple subjects with difficulty levels and real-time scoring.
+A full-stack Quiz Application built using Java (Spring Boot) and React, designed to evaluate users across multiple subjects with real-time scoring and performance tracking.
 
-## 📌 Features
-* 🎯 Subject-wise quizzes (HTML, Java, JavaScript, Spring Boot)
-* 📊 Difficulty levels: Easy | Medium | Hard
-* 🧠 Random question generation
-* ✅ Score tracking system
-* 🗂️ Database-driven question storage
-* 🔐 User-based quiz attempts tracking
-* ⚡ Fast and scalable backend with Spring Boot
-* 🧪 Unit testing using JUnit & Mockito
+📌 Features
+🎯 Subject-wise quizzes (HTML, Java, JavaScript, Spring Boot)
+📊 Difficulty levels: Easy | Medium | Hard
+🔄 Dynamic question fetching from database
+✅ Real-time score calculation
+📅 Quiz attempt history tracking (date & time)
+🔐 User authentication (JWT-based login system)
+⚡ Fast REST APIs using Spring Boot
+🎨 Clean and responsive UI using React
+🧪 Unit testing using JUnit & Mockito
 
-## 🛠️ Tech Stack
-### Backend:
-* Java
-* Spring Boot
-* Spring Data JPA
-* Hibernate
+🛠️ Tech Stack
+🔙 Backend
 
-### Frontend:
-* React.js
-* HTML, CSS, JavaScript
+Java
+Spring Boot
+Spring Security (JWT)
+Spring Data JPA
+Hibernate
 
-### Database:
-* MySQL
+🔜 Frontend
+React.js
+HTML, CSS, JavaScript
 
-### Testing:
-* JUnit
-* Mockito
-* 
-## 🧩 Project Structure
+Axios (API integration)
+🗄️ Database
 
-```
-Backend (Spring Boot)
-├── Controller
-├── Service
-├── Repository
-├── Entity
-└── DTO
+MySQL
+🧪 Testing
+JUnit
+Mockito
 
-Frontend (React)
-├── Components
-├── Pages
-└── API Integration
+🧩 Project Structure
+🔙 Backend (Spring Boot)
+com.classesQuiz.demo
+│
+├── config        → CORS configuration
+├── controller    → REST APIs (Auth, Quiz, Attempts)
+├── service       → Interfaces (business logic)
+├── impl          → Service implementations
+├── repository    → JPA repositories
+├── entity        → Database entities (User, Question, QuizAttempt)
+├── security      → JWT, Filters, Security Config
+└── DemoApplication.java
+🔜 Frontend (React)
+src
+│
+├── api           → API calls (authApi, quizApi)
+├── components    → Reusable UI (Navbar, QuestionCard, etc.)
+├── context       → State management (Auth, Quiz)
+├── pages         → Screens (Login, Dashboard, Quiz, Result, History)
+├── App.jsx       → Routing
+└── main.jsx      → Entry point
 
-## 📂 Database Design
+📂 Database Design
+Tables:
+questions:
+subject, level, question, options, correct_answer
+users
+id, email, password
+quiz_attempts
+user_id, subject, level
+total_questions, score
+attempt_date, attempt_time
 
-* `questions` → stores quiz questions with options and difficulty
-* `users` → stores user details
-* `quiz_attempts` → stores user performance (score, date, time)
+⚙️ Setup Instructions
+🔙 Backend
+# Clone project
+git clone <repo-link>
 
-### Database:
-* Import `.sql` file
-* Run all queries to setup tables and data
+# Open in IDE (IntelliJ / Eclipse)
 
-## 🧪 Testing
-* Unit testing implemented using **JUnit**
-* Mocking done with **Mockito**
-* Covers service and controller layer
+# Configure MySQL in application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/classesquizdb
+spring.datasource.username=root
+spring.datasource.password=your_password
 
-## 📈 Future Improvements
-* 🔐 Authentication (JWT)
-* 📊 Leaderboard system
-* 📱 Mobile responsive UI
-* 🌐 Deployment on cloud (AWS / Render)
+# Run Spring Boot application
+🔜 Frontend
+cd frontend
+npm install
+npm run dev
+🧪 Testing
 
-## 💡 Learning Outcome
-This project helped in understanding:
+Unit testing implemented using JUnit
 
-* Full-stack development flow
-* REST API design
-* Database structuring
-* Backend testing (JUnit + Mockito)
-* Real-world project architecture
-
-
+Mocking done using Mockito
+Covers:
+Service layer
+Controller layer
